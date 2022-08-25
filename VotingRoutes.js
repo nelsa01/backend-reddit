@@ -31,7 +31,7 @@ router.get('/vote/:commentId/:direction', (req, res) => {
     })
 });
 
-router.post('/votes', (req,res) => {
+router.post('/vote', (req,res) => {
   const {commentsIds} = req.body;
 
   getUserFromToken(req.cookies.token).then(userInfo => {

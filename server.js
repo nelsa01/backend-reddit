@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:4000',
+  origin: '*',
   credentials: true,
 }));
 
@@ -137,5 +137,5 @@ app.post('/comments', (req, res) => {
       res.sendStatus(401);
     });
 });
-
-app.listen(4000);
+var port_number = process.env.PORT || 4000;
+app.listen(port_number);
