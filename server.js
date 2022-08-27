@@ -14,6 +14,7 @@ const app = express();
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+// Setup cors origin to allow calls from only our frontend
 app.use(cors({
   origin: 'https://reddit-frontend-dkkydt16f-nelsa01.vercel.app/',
   credentials: true,
