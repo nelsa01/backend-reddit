@@ -65,6 +65,11 @@ app.post('/register', (req, res) => {
 app.get('/user', (req, res) => {
   const token = req.cookies.token;
 
+  if (!token) {
+    res.sendStatus(401);
+    return;
+  }
+  
   getUserFromToken(token)
     .then(user => {
       res.json({username:user.username});
