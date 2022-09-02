@@ -1,6 +1,6 @@
 # backend-reddit
 
-This project is a reddit clone done by Richard Mugabe
+
 
 In the project directory, you can run:
 
